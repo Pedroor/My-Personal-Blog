@@ -1,0 +1,12 @@
+type User {
+  id: ID
+  title: String
+  content: String
+  publised: Boolean
+  author: User
+}
+
+type Query {
+  posts: [Post]
+  post: Post
+}
