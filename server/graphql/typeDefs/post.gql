@@ -15,7 +15,7 @@ type Query {
 input PostInput {
   title: String!
   content: String!
-  publised: Boolean
+  published: Boolean
   authorId: String
 }
 
