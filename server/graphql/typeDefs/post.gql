@@ -1,12 +1,24 @@
-type User {
+type Post {
   id: ID
   title: String
   content: String
-  publised: Boolean
+  published: Boolean
+  authorId: String
   author: User
 }
 
 type Query {
   posts: [Post]
   post: Post
+}
+
+input PostInput {
+  title: String!
+  content: String!
+  publised: Boolean
+  authorId: String
+}
+
+type Mutation {
+  createPost(data: PostInput): Post
 }
